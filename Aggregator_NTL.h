@@ -241,32 +241,47 @@ public:
     validate(scaled_error, q);
     //cerr << "Unscaled error term in enc.: " << scaled_error << endl;
 #endif  
-    scale_inplace(scaled_error, this->t, q);  
+    scale_inplace(scaled_error, this->t, q);  // multiplying q by t
 #ifdef DEBUG
     validate(scaled_error, q);
     //cerr << "Scaled error term in enc.: " << scaled_error << endl;
+#endif
+    ZZX second_error = error(q, N, dl); //generate the second error term
+#ifdef DEBUG
+    validate(second_error, q);
 #endif          
     add_inplace(ret, scaled_error, q);
+    add_inplace(ret, second_error, q);
     add_inplace(ret, x, q);
 #ifdef DEBUG
     validate(ret, q);
-#endif    
+#endif
+
+
     return ret;
   }
 
   ZZX message_scaled_enc(const ZZX & sk, const ZZX & x, const ZZX & pk){
-    ZZX ret = mult(sk, pk, q, poly_modulus);
+    ZZX ret = mult(sk, pk, q, poly_modulus); //multiplication of the sk*pk
     ZZX e = error(q, N, dl);
 #ifdef DEBUG
     //cerr << "Added term in enc.: " << ret + e << endl;
 #endif    
     ZZX scaled_input = x;
-    scale_inplace(scaled_input, delta, q);
+    scale_inplace(scaled_input, delta, q); //adds the input in
 #ifdef DEBUG
     //cerr << "Scaled-up input: " << scaled_input << endl;
-#endif    
+#endif
+    ZZX second_error = error(q, N, dl); //generate the second error term
+#ifdef DEBUG
+    validate(second_error, q);   
+#endif
+    add_inplace(ret, second_error, q);
     add_inplace(ret, e, q);
     add_inplace(ret, scaled_input, q);
+#ifdef DEBUG
+    validate(ret, q);
+#endif
     return ret;
   }
 
