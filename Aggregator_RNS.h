@@ -462,6 +462,18 @@ public:
     assert(*noise_added == e);
 #endif    
     ret += e;
+    //adding the second error term
+    Polynomial e2(this->ctext_parms);
+    //TODO replace this - taken out for debugging
+    e2.error(this->dl);
+    //e2.zero();
+    ret += e2; // add the new error term
+#ifdef DEBUG
+    if(noise_added != nullptr){
+      *noise_added += e2;
+    }
+    assert(*noise_added == e2 + e);
+#endif
     //Raise x to base q
     Polynomial x_raised = x.base_conv(ctext_parms, *t_to_q);
 #ifdef DEBUG    
@@ -494,6 +506,11 @@ public:
     e.error(this->dl);
     //Add in the error to make a RLWE term
     ret += e;
+    //Get the second error term
+    Polynomial e2(this->ctext_parms);
+    e2.error(this->dl);
+    //Add in the error
+    ret += e2;
     //Raise x to base q
     Polynomial x_raised = x.base_conv(ctext_parms, *t_to_q);
     //Scale x by delta
