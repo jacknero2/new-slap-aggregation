@@ -230,11 +230,11 @@ void plain_main(const unsigned int plain_bits, const unsigned int num_users, uns
                unsigned int iters, bool ntl=false){
   vector<double> add_times;
   DiscreteLaplacian dl;
-  assert(plain_bits <= 16);
+  /*assert(plain_bits <= 16);
   uint16_t m = dl.uniform_64((uint64_t) UINT16_MAX);
   plain_agg_16(m, num_users, N, k_prime, iters, add_times);
+  */
   
-  /*
   
   cout << "#Plain agg. with " << plain_bits << " bits" << endl;
   if(plain_bits <= 16){
@@ -263,7 +263,7 @@ void plain_main(const unsigned int plain_bits, const unsigned int num_users, uns
     plain_agg(m, num_users, N, k_prime, iters, add_times);
   }
   
-  */
+
   
   std::string category = "plain_agg";
   for(const double & d : add_times){
