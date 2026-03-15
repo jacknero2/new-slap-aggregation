@@ -1,0 +1,55 @@
+\begin{table*}\scriptsize
+  \begin{center}
+    \caption{Throughput of full-RNS \ours with 1000 users and 16-bit messages with 5 Mbps upload speed}
+    \label{tab:plain-throughput-5mbps}
+    \resizebox{\linewidth}{!}{
+    \begin{tabular}{|r|r|r|r||r|r|r||r|r|r|}
+    \hline
+       Variant & $ \mid t \mid$ & $k'$ & $N$ & $NoisyEnc$ & $Agg$ & Upload Time (ms) & Ciphertext & \ours Throughput & Slowdown  \\
+       & & & &(ms) & (ms) & at 5 Mbps & Uploads/s & (aggs/s) & vs. Plain \\
+       \hline
+       Noise-Scaled & 32 & 1 & 2,048 & 1.04 & 1.65 & 18.43 & 54.25 & 111,111 & 3.14 \\ 
+       Message-Scaled & 32 & 1 & 4,096 & 2.56 & 9.41 & 54.07 & 18.50 & 75,757 & 1.42 \\ 
+       Noise-Scaled & 64 & 2 & 2,048 & 5.24 & 9.03 & 31.54 & 31.71 & 129,870 & 0.71 \\ 
+       Message-Scaled & 64 & 2 & 4,096 & 9.14 & 29.88 & 106.50 & 9.39 & 76,923 & 0.52 \\ 
+       \iffalse
+       Noise-Scaled & 128 & 4 & 8,192 & 14.67 & 53.72 & 314.57 & 3.18 & 104,167 & 2.75 \\
+       Message-Scaled & 128 & 4 & 16,384 & 52.46 & 188.19 & 754.96 & 1.32 & 104,167 & 3.31 \\ 
+       
+       Noise-Scaled & 192 & 7 & 8,192 & 15.31 & 54.54 & 419.43 & 2.38 & 136,718 & 1.20 \\
+       Message-Scaled & 192 & 7 & 16,384 & 54.74 & 201.90 & 1468.01 & 0.68 & 78,124 & 2.10 \\ 
+       \fi
+       \hline
+    \end{tabular}
+    }
+  \end{center}
+\end{table*}
+
+\vspace{1em}
+
+\begin{table*}\scriptsize
+  \begin{center}
+    \caption{Throughput of full-RNS \ours with 1000 users and 16-bit messages with 25 Mbps upload speed} \color{red}
+    \label{tab:plain-throughput-25mbps}
+    \resizebox{\linewidth}{!}{
+    \begin{tabular}{|r|r|r|r||r||r|r|r|}
+    \hline
+       Variant & $ \mid t \mid$ & $k'$ & $N$ & Upload Time (ms) & Ciphertext & SLAP Throughput & Slowdown vs. Plain \\
+       & & & & at 25 Mbps & Uploads/s & (aggs/s) & \\
+       \hline
+       Noise-Scaled & 32 & 1 & 2,048 & 3.69 & 271.27 & 555,555 & 3.14 \\ 
+       Message-Scaled & 32 & 1 & 4,096 & 10.81 & 92.48 & 378,787 & 1.42 \\ 
+       Noise-Scaled & 64 & 2 & 2,048 & 6.31 & 158.53 & 649,350 & 0.71 \\ 
+       Message-Scaled & 64 & 2 & 4,096 & 21.30 & 46.95 & 384,615 & 0.52 \\ 
+       \iffalse
+       Noise-Scaled & 128 & 4 & 8,192 & 62.91 & 15.89 & 130,208 & 2.75 \\
+       Message-Scaled & 128 & 4 & 16,384 & 150.99 & 6.62 & 108,506 & 3.31 \\ 
+       
+       Noise-Scaled & 192 & 7 & 8,192 & 83.89 & 11.92 & 170,897 & 1.20 \\
+       Message-Scaled & 192 & 7 & 16,384 & 293.60 & 3.41 & 390,622 & 2.10 \\ 
+       \fi
+       \hline
+    \end{tabular}
+    }
+  \end{center}
+\end{table*}

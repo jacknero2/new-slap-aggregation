@@ -1,0 +1,19 @@
+\begin{table*}\scriptsize
+  \begin{center}
+    \caption{Throughput of full-RNS \ours with 1000 users and 16-bit messages with 25 Mbps upload speed}
+    \label{tab:plain-throughput-25mbps}
+    \resizebox{\linewidth}{!}{
+    \begin{tabular}{|r|r|r|r||r|r|r|r|}
+    \hline
+       Variant & $ \mid t \mid$ & $k'$ & $N$ & Upload Time (ms) & Ciphertext & SLAP Throughput & Slowdown vs. Plain \\
+       & & & & at 25 Mbps & Uploads/s & (aggs/s) & \\
+       \hline
+       Noise-Scaled & 32 & 1 & 2,048 & 3.69 & 271.27 & 555,555 & 3.24 \\ 
+       Message-Scaled & 32 & 1 & 4,096 & 10.81 & 92.48 & 378,787 & 1.27 \\ 
+       Noise-Scaled & 64 & 2 & 2,048 & 6.31 & 158.53 & 649,350 & 0.85 \\ 
+       Message-Scaled & 64 & 2 & 4,096 & 21.30 & 46.95 & 384,615 & 0.52 \\ 
+       \hline
+    \end{tabular}
+    }
+  \end{center}
+\end{table*}

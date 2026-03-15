@@ -20,28 +20,21 @@ mkdir -p ./results/${SUBFOLDER}/
 module load gcc/9.1.0
 
 PLAIN=128
-USERS=100000
+USERS=10000
 
 time $EXECUTABLE -t $PLAIN -n $USERS -i $ITERATIONS $BACKENDS -c NS > ./results/${SUBFOLDER}/${PLAIN}_${USERS}_NS.txt
 time $EXECUTABLE -t $PLAIN -n $USERS -i $ITERATIONS $BACKENDS -c MS > ./results/${SUBFOLDER}/${PLAIN}_${USERS}_MS.txt
 python stats.py ./results/${SUBFOLDER}/${PLAIN}_${USERS}_*.txt > ./results/${SUBFOLDER}/${PLAIN}_${USERS}.rep
 echo "Finished ${PLAIN} ${USERS}"
 
-USERS=1000000
+USERS=10e15
 
 time $EXECUTABLE -t $PLAIN -n $USERS -i $ITERATIONS $BACKENDS -c NS > ./results/${SUBFOLDER}/${PLAIN}_${USERS}_NS.txt
 time $EXECUTABLE -t $PLAIN -n $USERS -i $ITERATIONS $BACKENDS -c MS > ./results/${SUBFOLDER}/{PLAIN}_${USERS}_MS.txt
 python stats.py ./results/${SUBFOLDER}/${PLAIN}_${USERS}_*.txt > ./results/${SUBFOLDER}/${PLAIN}_${USERS}.rep
 echo "Finished ${PLAIN} ${USERS}"
 
-USERS=10000000
-
-time $EXECUTABLE -t $PLAIN -n $USERS -i $ITERATIONS $BACKENDS -c NS > ./results/${SUBFOLDER}/${PLAIN}_${USERS}_NS.txt
-time $EXECUTABLE -t $PLAIN -n $USERS -i $ITERATIONS $BACKENDS -c MS > ./results/${SUBFOLDER}/{PLAIN}_${USERS}_MS.txt
-python stats.py ./results/${SUBFOLDER}/${PLAIN}_${USERS}_*.txt > ./results/${SUBFOLDER}/${PLAIN}_${USERS}.rep
-echo "Finished ${PLAIN} ${USERS}"
-
-USERS=100000000
+USERS=10e21
 
 time $EXECUTABLE -t $PLAIN -n $USERS -i $ITERATIONS $BACKENDS -c NS > ./results/${SUBFOLDER}/${PLAIN}_${USERS}_NS.txt
 time $EXECUTABLE -t $PLAIN -n $USERS -i $ITERATIONS $BACKENDS -c MS > ./results/${SUBFOLDER}/{PLAIN}_${USERS}_MS.txt

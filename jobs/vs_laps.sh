@@ -17,7 +17,7 @@ NUM_USERS=1000
 ITERATIONS=100
 
 
-SUBFOLDER=laps_comparison
+SUBFOLDER=laps_comparison_final_32_16_final
 
 mkdir -p ./results/${SUBFOLDER}/
 module load gcc/9.1.0
@@ -26,4 +26,3 @@ time $EXECUTABLE -t $PLAIN_SIZE -w $MESSAGE_SIZE -n $NUM_USERS -i $ITERATIONS $B
 time $EXECUTABLE -t $PLAIN_SIZE -w $MESSAGE_SIZE -n $NUM_USERS -i $ITERATIONS $BACKENDS -c MS > ./results/${SUBFOLDER}/laps_vs_MS.txt
 
 python stats.py ./results/${SUBFOLDER}/*.txt > ./results/${SUBFOLDER}/laps.rep
-

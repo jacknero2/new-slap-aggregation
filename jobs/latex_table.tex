@@ -1,0 +1,29 @@
+\begin{table*}\scriptsize
+%\sidewaystablefn%
+  \begin{center}
+  %\begin{minipage}{\textheight}
+    \caption{Throughput of full-RNS \ours with 1000 users and 16-bit messages with 5 Mbps upload speed} \color{red} %\vspace{-10pt}
+    \label{tab:plain-throughput-5mbps}
+    \resizebox{\linewidth}{!}{
+    \begin{tabular}{|r|r|r|r||r|r|r||r|r|r|} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+    \hline
+       Variant & $ \mid t \mid$ & $k'$ & $N$ & $NoisyEnc$ & $Agg$ & Upload Time (ms) & Ciphertext & \ours Throughput & Slowdown  \\
+       & & & &(ms) & (ms) & at 5 Mbps & Uploads/s & (aggs/s) & vs. Plain \\
+       \hline
+       Noise-Scaled & 32 & 1 & 2,048 & 1.03 & 1.52 & 18.43 & 54.25 & 111,111 & 3.34 \\
+       Message-Scaled & 32 & 1 & 4,096 & 2.54 & 9.25 & 54.07 & 18.50 & 75,757 & 1.44 \\
+       Noise-Scaled & 64 & 2 & 2,048 & 2.83 & 8.99 & 31.54 & 31.71 & 129,870 & 0.86 \\
+       Message-Scaled & 64 & 2 & 4,096 & 8.97 & 30.08 & 106.50 & 9.39 & 76,923 & 0.52 \\
+       \iffalse
+       Noise-Scaled & 128 & 4 & 8,192 & 14.67 & 53.72 & 314.57 & 3.18 & 104,167 & 2.75 \\
+       Message-Scaled & 128 & 4 & 16,384 & 52.46 & 188.19 & 754.96 & 1.32 & 104,167 & 3.31 \\ %Multiply NS time by 2 for larger N, and 1.2 for 1 extra q component
+       
+       Noise-Scaled & 192 & 7 & 8,192 & 15.31 & 54.54 & 419.43 & 2.38 & 136,718 & 1.20 \\
+       Message-Scaled & 192 & 7 & 16,384 & 54.74 & 201.90 & 1468.01 & 0.68 & 78,124 & 2.10 \\ %Multiply NS time by 2 for larger N, and 7/4 for 3 extra q components
+       \fi
+       \hline
+    \end{tabular}
+    }
+    %\end{minipage}
+  \end{center}
+\end{table*}

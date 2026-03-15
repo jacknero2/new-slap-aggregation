@@ -1,0 +1,15 @@
+# |q| 144 |t| 128 users 10000 Noise-Scaled
+#Agg.: N 8192 k 5
+#Plain space: k' 8
+rns_enc_overall: 1.04956e+07
+rns_enc_overall: 1.01169e+07
+rns_enc_overall: 9.9428e+06
+rns_enc_overall: 9.89104e+06
+rns_enc_overall: 9.86809e+06
+rns_dec: 2.24671e+08
+rns_dec: 2.25463e+08
+rns_dec: 2.23482e+08
+rns_dec: 2.21869e+08
+rns_dec: 2.22975e+08
+#Plain agg. with 128 bits
+iter_vals_count 8192
