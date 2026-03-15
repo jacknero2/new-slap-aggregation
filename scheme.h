@@ -30,11 +30,16 @@ unsigned int ctext_modulus_size(const unsigned int log_t, const size_t num_users
   }
   unsigned int q_bitsize;
 
+  NTL::ZZ t;
+  t = NTL::ZZ(1) << log_t;
+  NTL::ZZ n;
+  n = NTL::ZZ(num_users);
+
   if(s == NS){
-    q_bitsize = (log_t+1) + log_num_users + LOG2_3;
+    q_bitsize = NTL::NumBits(n * (5 * t + 4));
   }
   else{
-    q_bitsize = 2*(log_t+1) + log_num_users + LOG2_3;
+    q_bitsize = NTL::NumBits(2*t*t + 6*t*n);
   }
   return q_bitsize;
 }
