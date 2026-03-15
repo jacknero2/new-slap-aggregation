@@ -1,0 +1,46 @@
+./tab_1_32.sh: line 20: module: command not found
+
+real	0m2.674s
+user	0m2.650s
+sys	0m0.024s
+
+real	0m9.997s
+user	0m9.955s
+sys	0m0.042s
+Finished 32 100
+
+real	0m24.158s
+user	0m23.969s
+sys	0m0.188s
+
+real	1m29.943s
+user	1m29.637s
+sys	0m0.302s
+Finished 32 1000
+
+real	3m51.924s
+user	3m50.249s
+sys	0m1.669s
+
+real	14m44.071s
+user	14m42.230s
+sys	0m1.803s
+Finished 32 10000
+
+real	38m20.559s
+user	38m17.026s
+sys	0m3.445s
+
+real	145m35.363s
+user	145m25.843s
+sys	0m9.232s
+Finished 32 100000
+
+real	1449m23.956s
+user	1447m54.260s
+sys	1m26.388s
+
+real	1455m13.507s
+user	1453m43.243s
+sys	1m26.599s
+Finished 32 1000000

@@ -1,0 +1,98 @@
+Stats for ./results/tab_1/32_100_MS.txt:
+	Category rns_enc_overall::
+		Size: 10
+		Avg: 5112397.0
+		Stdev: 96033.96784992277
+		Sum: 51123970.0
+		Median: 5090525.0
+
+
+	Category rns_dec::
+		Size: 10
+		Avg: 3540061.0
+		Stdev: 90639.35761577307
+		Sum: 35400610.0
+		Median: 3499640.0
+
+
+	Category iter_vals_count:
+		Size: 1
+		Avg: 4096.0
+		Stdev: 0.0
+		Sum: 4096.0
+		Median: 4096.0
+
+
+	Category plain_agg:
+		Size: 10
+		Avg: 1689227.0
+		Stdev: 1233.1589516360007
+		Sum: 16892270.0
+		Median: 1688905.0
+
+
+	Category ntl_enc_overall::
+		Size: 10
+		Avg: 83581690.0
+		Stdev: 2080532.57866826
+		Sum: 835816900.0
+		Median: 82900300.0
+
+
+	Category ntl_dec::
+		Size: 10
+		Avg: 88615640.0
+		Stdev: 1482483.1959924537
+		Sum: 886156400.0
+		Median: 88350850.0
+
+
+Stats for ./results/tab_1/32_100_NS.txt:
+	Category rns_enc_overall::
+		Size: 10
+		Avg: 1130851.0
+		Stdev: 29863.495257588318
+		Sum: 11308510.0
+		Median: 1122190.0
+
+
+	Category rns_dec::
+		Size: 10
+		Avg: 1067912.0
+		Stdev: 17111.568484507785
+		Sum: 10679120.0
+		Median: 1059995.0
+
+
+	Category iter_vals_count:
+		Size: 1
+		Avg: 2048.0
+		Stdev: 0.0
+		Sum: 2048.0
+		Median: 2048.0
+
+
+	Category plain_agg:
+		Size: 10
+		Avg: 1572116.0
+		Stdev: 3555.2952057459306
+		Sum: 15721160.0
+		Median: 1571195.0
+
+
+	Category ntl_enc_overall::
+		Size: 10
+		Avg: 21970110.0
+		Stdev: 1052356.3336151876
+		Sum: 219701100.0
+		Median: 21814300.0
+
+
+	Category ntl_dec::
+		Size: 10
+		Avg: 24928410.0
+		Stdev: 1628193.4949200603
+		Sum: 249284100.0
+		Median: 23998500.0
+
+

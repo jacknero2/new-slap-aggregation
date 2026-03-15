@@ -29,6 +29,7 @@ unsigned int ctext_modulus_size(const unsigned int log_t, const size_t num_users
     log_num_users++;
   }
   unsigned int q_bitsize;
+
   if(s == NS){
     q_bitsize = (log_t+1) + log_num_users + LOG2_3;
   }

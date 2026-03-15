@@ -144,6 +144,7 @@ public:
     ZZX tmp;
     secret_keys.clear();
     secret_keys.reserve(num_users);
+
     for(unsigned int i = 0; i < num_users; i++){
       if(!dummy){
         tmp = error(q, N, dl);
@@ -246,12 +247,14 @@ public:
     validate(scaled_error, q);
     //cerr << "Scaled error term in enc.: " << scaled_error << endl;
 #endif
-    ZZX second_error = error(q, N, dl); //generate the second error term
+    ZZX scaled_error2 = error(q, N, dl); //generate the second error term
+#endif  
+    scale_inplace(scaled_error2, this->t, q);  // multiplying q by t
 #ifdef DEBUG
-    validate(second_error, q);
+    validate(scaled_error2, q);
 #endif          
     add_inplace(ret, scaled_error, q);
-    add_inplace(ret, second_error, q);
+    add_inplace(ret, scaled_error2, q);
     add_inplace(ret, x, q);
 #ifdef DEBUG
     validate(ret, q);
@@ -376,6 +379,7 @@ void test_enc(vector<ZZX> & ctexts, Aggregator_NTL & agg, const uint64_t ts,
   unsigned int N = agg.poly_mod_deg();
   ctexts.reserve(users);
   agg.secret_keys(agg_key, sec_keys);
+  
   for(unsigned int i = 0; i < users; i++){
     //First, get some random vector for user input
     input = uniform(q, N);
@@ -390,6 +394,8 @@ void test_enc(vector<ZZX> & ctexts, Aggregator_NTL & agg, const uint64_t ts,
     noise_times.push_back(noise_time);
     enc_times.push_back(enc_time);
   }
+
+
   /* See similar section in RNS aggregator
 #ifdef DEBUG
   assert(noise_times.size() == users);
@@ -414,6 +420,7 @@ void test_enc(vector<ZZX> & ctexts, Aggregator_NTL & agg, const ZZX & pk,
   unsigned int N = agg.poly_mod_deg();
   ctexts.reserve(users);
   agg.secret_keys(agg_key, sec_keys);
+  
   for(unsigned int i = 0; i < users; i++){
     //First, get some random vector for user input
     input = uniform(q, N);
@@ -428,6 +435,8 @@ void test_enc(vector<ZZX> & ctexts, Aggregator_NTL & agg, const ZZX & pk,
     noise_times.push_back(noise_time);
     enc_times.push_back(enc_time);
   }
+
+
   /* See similar section in RNS aggregator
 #ifdef DEBUG
   assert(noise_times.size() == users);
@@ -437,4 +446,4 @@ void test_enc(vector<ZZX> & ctexts, Aggregator_NTL & agg, const ZZX & pk,
 */
 }
 
-#endif
+//#endif

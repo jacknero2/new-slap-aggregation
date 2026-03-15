@@ -1,0 +1,55 @@
+# |q| 47 |t| 16 users 1000 Message-Scaled
+#Agg.: N 2048 k 1
+#Plain space: k' 1
+rns_enc_overall: 1.3228e+06
+rns_enc_overall: 987746
+rns_enc_overall: 989737
+rns_enc_overall: 991063
+rns_enc_overall: 987108
+rns_enc_overall: 987567
+rns_enc_overall: 999033
+rns_enc_overall: 981186
+rns_enc_overall: 982399
+rns_enc_overall: 980660
+rns_dec: 1.65275e+06
+rns_dec: 1.6358e+06
+rns_dec: 1.63938e+06
+rns_dec: 1.65292e+06
+rns_dec: 1.67051e+06
+rns_dec: 1.62096e+06
+rns_dec: 1.5406e+06
+rns_dec: 1.49173e+06
+rns_dec: 1.49841e+06
+rns_dec: 1.4912e+06
+#Plain agg. with 16 bits
+iter_vals_count 2048
+plain_agg 9.42673e+06
+plain_agg 9.00757e+06
+plain_agg 9.37586e+06
+plain_agg 9.41043e+06
+plain_agg 8.93917e+06
+plain_agg 9.07162e+06
+plain_agg 9.40738e+06
+plain_agg 8.9384e+06
+plain_agg 9.2375e+06
+plain_agg 9.12295e+06
+ntl_enc_overall: 2.25023e+07
+ntl_enc_overall: 2.49445e+07
+ntl_enc_overall: 2.38202e+07
+ntl_enc_overall: 2.12073e+07
+ntl_enc_overall: 2.08951e+07
+ntl_enc_overall: 2.09998e+07
+ntl_enc_overall: 2.08621e+07
+ntl_enc_overall: 2.14679e+07
+ntl_enc_overall: 2.22866e+07
+ntl_enc_overall: 2.18351e+07
+ntl_dec: 6.88267e+07
+ntl_dec: 5.50671e+07
+ntl_dec: 5.641e+07
+ntl_dec: 5.51349e+07
+ntl_dec: 5.45474e+07
+ntl_dec: 5.4521e+07
+ntl_dec: 5.94841e+07
+ntl_dec: 5.72712e+07
+ntl_dec: 5.53044e+07
+ntl_dec: 5.49841e+07

@@ -345,7 +345,8 @@ public:
         secret_keys[i].zero();
       }
       
-      agg_key -= secret_keys[i];
+      //agg_key -= secret_keys[i]; THIS PART IS CORRECT
+      agg_key -= secret_keys[0];
     }
     return;
   }
@@ -467,6 +468,7 @@ public:
     //TODO replace this - taken out for debugging
     e2.error(this->dl);
     //e2.zero();
+    e2 *= t_mod_q;
     ret += e2; // add the new error term
 #ifdef DEBUG
     if(noise_added != nullptr){
@@ -614,6 +616,7 @@ void test_enc(vector<Polynomial> & ctexts, Aggregator_RNS & agg, const Polynomia
   ctexts.reserve(users);
   agg.secret_keys(agg_key, sec_keys);
   Polynomial result(params_pair.first);
+  
   for(unsigned int i = 0; i < users; i++){
     //First, get some random vector for user input
     input.uniform(*agg_dl);
@@ -631,7 +634,6 @@ void test_enc(vector<Polynomial> & ctexts, Aggregator_RNS & agg, const Polynomia
     enc_times.push_back(enc_time);
   }
 }
-
 //First is noise time, second is encryption time
 //Sum to get total time
 //NB decryption doesn't need a harness function
@@ -647,7 +649,7 @@ void test_enc(vector<Polynomial> & ctexts, Aggregator_RNS & agg, const uint64_t 
               agg_key, do_noise, num_to_generate, 
               noise_times, enc_times);
   return;
-  
+    
   
   //No longer valid for the testing framework, but needed for a real implementation
   /*
@@ -658,7 +660,6 @@ void test_enc(vector<Polynomial> & ctexts, Aggregator_RNS & agg, const uint64_t 
 #endif  
 */
 }
-
 
 
 

@@ -14,19 +14,20 @@ EXECUTABLE=./slap
 ITERATIONS=10
 
 
-SUBFOLDER=tab_3
+SUBFOLDER=16_results
 
 mkdir -p ./results/${SUBFOLDER}/
 module load gcc/9.1.0
 
 PLAIN=16
-
+'''
 USERS=100
 
 time $EXECUTABLE -t $PLAIN -n $USERS -i $ITERATIONS $BACKENDS -c NS > ./results/${SUBFOLDER}/${PLAIN}_${USERS}_NS.txt
 time $EXECUTABLE -t $PLAIN -n $USERS -i $ITERATIONS $BACKENDS -c MS > ./results/${SUBFOLDER}/${PLAIN}_${USERS}_MS.txt
 python stats.py ./results/${SUBFOLDER}/${PLAIN}_${USERS}_*.txt > ./results/${SUBFOLDER}/${PLAIN}_${USERS}.rep
 echo "Finished ${PLAIN} ${USERS}"
+'''
 '''
 USERS=1000
 
@@ -50,7 +51,7 @@ python stats.py ./results/${SUBFOLDER}/${PLAIN}_${USERS}_*.txt > ./results/${SUB
 echo "Finished ${PLAIN} ${USERS}"
 '''
 
-USERS=1000
+USERS=10000
 
 time $EXECUTABLE -t $PLAIN -n $USERS -i $ITERATIONS $BACKENDS -c NS > ./results/${SUBFOLDER}/${PLAIN}_${USERS}_NS.txt
 time $EXECUTABLE -t $PLAIN -n $USERS -i $ITERATIONS $BACKENDS -c MS > ./results/${SUBFOLDER}/${PLAIN}_${USERS}_MS.txt

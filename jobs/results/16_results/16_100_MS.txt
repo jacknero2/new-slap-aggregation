@@ -1,0 +1,55 @@
+# |q| 44 |t| 16 users 100 Message-Scaled
+#Agg.: N 2048 k 1
+#Plain space: k' 2
+rns_enc_overall: 1.11626e+06
+rns_enc_overall: 1.05673e+06
+rns_enc_overall: 1.06599e+06
+rns_enc_overall: 1.05521e+06
+rns_enc_overall: 1.04606e+06
+rns_enc_overall: 1.05272e+06
+rns_enc_overall: 1.06914e+06
+rns_enc_overall: 1.04734e+06
+rns_enc_overall: 1.04261e+06
+rns_enc_overall: 1.05015e+06
+rns_dec: 1.28326e+06
+rns_dec: 1.26917e+06
+rns_dec: 1.26753e+06
+rns_dec: 1.24936e+06
+rns_dec: 1.24856e+06
+rns_dec: 1.24558e+06
+rns_dec: 1.24145e+06
+rns_dec: 1.23883e+06
+rns_dec: 1.24217e+06
+rns_dec: 1.24178e+06
+#Plain agg. with 16 bits
+iter_vals_count 2048
+plain_agg 1.67142e+06
+plain_agg 1.66699e+06
+plain_agg 1.67001e+06
+plain_agg 1.66985e+06
+plain_agg 1.66793e+06
+plain_agg 1.66987e+06
+plain_agg 1.66942e+06
+plain_agg 1.66677e+06
+plain_agg 1.67017e+06
+plain_agg 1.67019e+06
+ntl_enc_overall: 3.9629e+07
+ntl_enc_overall: 3.88814e+07
+ntl_enc_overall: 3.85766e+07
+ntl_enc_overall: 3.90806e+07
+ntl_enc_overall: 3.88718e+07
+ntl_enc_overall: 3.87907e+07
+ntl_enc_overall: 3.8956e+07
+ntl_enc_overall: 3.87456e+07
+ntl_enc_overall: 3.90893e+07
+ntl_enc_overall: 3.86871e+07
+ntl_dec: 3.0895e+07
+ntl_dec: 2.36676e+07
+ntl_dec: 2.46035e+07
+ntl_dec: 2.46359e+07
+ntl_dec: 2.58318e+07
+ntl_dec: 2.50004e+07
+ntl_dec: 2.37935e+07
+ntl_dec: 2.63383e+07
+ntl_dec: 2.70435e+07
+ntl_dec: 2.53904e+07

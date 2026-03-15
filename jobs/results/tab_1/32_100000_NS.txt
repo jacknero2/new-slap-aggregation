@@ -1,0 +1,55 @@
+# |q| 53 |t| 32 users 100000 Noise-Scaled
+#Agg.: N 2048 k 1
+#Plain space: k' 1
+rns_enc_overall: 584009
+rns_enc_overall: 539634
+rns_enc_overall: 531031
+rns_enc_overall: 541211
+rns_enc_overall: 531773
+rns_enc_overall: 537061
+rns_enc_overall: 540303
+rns_enc_overall: 534539
+rns_enc_overall: 534438
+rns_enc_overall: 533188
+rns_dec: 1.12029e+08
+rns_dec: 1.09519e+08
+rns_dec: 1.10849e+08
+rns_dec: 1.10581e+08
+rns_dec: 1.09476e+08
+rns_dec: 1.11247e+08
+rns_dec: 1.13403e+08
+rns_dec: 1.10369e+08
+rns_dec: 1.11956e+08
+rns_dec: 1.11255e+08
+#Plain agg. with 32 bits
+iter_vals_count 2048
+plain_agg 8.55268e+08
+plain_agg 8.72801e+08
+plain_agg 8.67246e+08
+plain_agg 8.49824e+08
+plain_agg 8.62104e+08
+plain_agg 8.55295e+08
+plain_agg 8.71636e+08
+plain_agg 8.4923e+08
+plain_agg 8.65553e+08
+plain_agg 8.63884e+08
+ntl_enc_overall: 2.14437e+07
+ntl_enc_overall: 2.13391e+07
+ntl_enc_overall: 2.10389e+07
+ntl_enc_overall: 2.12588e+07
+ntl_enc_overall: 2.13212e+07
+ntl_enc_overall: 2.08429e+07
+ntl_enc_overall: 2.06546e+07
+ntl_enc_overall: 2.3626e+07
+ntl_enc_overall: 2.11363e+07
+ntl_enc_overall: 2.06524e+07
+ntl_dec: 3.48634e+09
+ntl_dec: 3.45745e+09
+ntl_dec: 3.46301e+09
+ntl_dec: 3.45416e+09
+ntl_dec: 3.44302e+09
+ntl_dec: 3.49559e+09
+ntl_dec: 3.44735e+09
+ntl_dec: 3.44369e+09
+ntl_dec: 3.46145e+09
+ntl_dec: 3.48888e+09
